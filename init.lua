@@ -22,6 +22,9 @@ local modpath = minetest.get_modpath(modname)  -- find the this mods directory
 dofile(modpath.."/tools.lua") -- load rewarding tools
 -- dofile(modpath.."/advtools.lua") -- load rewarding advanced tools
 
+if minetest.get_modpath("default") then
+	dofile(modpath.."/chest.lua") -- load rewarding chests
+end
 if minetest.get_modpath("3d_armor") then
 	dofile(modpath.."/armor.lua") -- load rewarding armor
 end
